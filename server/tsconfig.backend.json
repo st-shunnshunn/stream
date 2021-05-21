@@ -1,0 +1,30 @@
+{
+    "exclude": ["node_modules", "dest",],
+    "include": ["src/**/*"],
+    // typesの読み込み先
+    "typeRoots":[
+      "node_modules/@types",
+      "src/@types",
+      "src/db/@types",
+    ],
+    "compileOnSave": true,
+    "compilerOptions": {
+      "outDir": "dest",
+      // 入力ファイルとして JavaScript の拡張子 (.js) も対象にする
+      "allowJs": true,
+      "sourceMap": true,
+      // どのバージョンでjsを出力するか
+      "target": "ESNext",
+      // 出力するjsのモジュールの仕組みとして何を使用するか
+      "module": "CommonJS",
+      "declaration": true,
+      "declarationMap": true,
+      "strict": true,
+      "noImplicitAny": true,
+      "alwaysStrict" : true,
+      "moduleResolution": "Node",
+      "esModuleInterop" : true,
+      "allowSyntheticDefaultImports" : true,
+      "lib": [ "es2015", "es2015.promise", "dom", "dom.iterable" ],
+    }
+  }
